@@ -1,5 +1,5 @@
 import React from 'react';
-// import Menu from './Menu';
+import Menu from './Menu';
 // import Locations from './Locations';
 
 const menuItems = [{id: 1, name:"Cheeseburger", price: 5}, {id:2, name:"fries", price: 2}, {id: 3, name:"pizza", price: 5}]
@@ -10,11 +10,7 @@ class App extends React.Component {
     return (
       <div>
         <div className="menu">
-        <ul>
-            {menuItems.map(menuItem => 
-                <li key={menuItem.id} >{menuItem.name}: {menuItem.price}</li>
-            )}
-          </ul>
+            <Menu menuItems={menuItems} />
         </div>
        <div className="locations">
             <ul>
